@@ -21,6 +21,20 @@ const Form:React.FC<FormProps> = ({createTodo}) => {
     };
 
     return (
-        
-    )
-}
+        <div>
+            <form onSubmit={addTodo}>
+                <input
+                    type="text"
+                    placeholder="入力してね"
+                    value={enteredTodo}
+                    onChange={(e:React.ChangeEvent<HTMLInputElement>) =>
+                        setEnteredTodo(e.target.value)
+                    }
+                 />
+                 <button>+</button>
+            </form>
+        </div>
+    );
+};
+
+export default Form;

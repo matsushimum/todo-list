@@ -15,12 +15,12 @@ const List:React.FC<Listprops> = ({todos,deleteTodo,updateTodo}) => {
     };
     return(
         <div>
-            //TODOリストを取得して[map関数]で1つ1つ取り出す
+            {/* TODOリストを取得して[map関数]で1つ1つ取り出す */}
             {todos.map((todo) => {
                 return(
                     //[Item]に必要なPropsを渡す
                     <Item
-                        Key = {todo.id}
+                        key = {todo.id}
                         todo = {todo}
                         complete = {complete}
                         updateTodo = {updateTodo}
